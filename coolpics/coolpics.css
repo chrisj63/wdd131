@@ -11,7 +11,6 @@ main,
 footer {
   max-width: 1500px;
   margin: 1rem auto;
-  border: 1px solid #ccc;
   padding: 1rem;
   background-color: #006eb6;
   color: white;
@@ -20,6 +19,7 @@ main {
     background-color: #AAAAAA;
     display: grid;
     grid-template-columns: 1fr;
+}
 h1 {
     text-align: center;
 }
@@ -55,7 +55,7 @@ footer {
 img {
   width: 300px;
   height: 300px;
- object-fit: cover;
+  object-fit: cover;
   border: 1px solid #ccc;
 }
 #bodyHeader {
@@ -86,4 +86,3 @@ img {
         display: inline;
     }
 }
-                
