@@ -11,7 +11,7 @@ main,
 footer {
   max-width: 1500px;
   margin: 1rem auto;
-  border: 1px solid #ccc;
+  border: 10px solid red;
   padding: 1rem;
   background-color: #006eb6;
   color: white;
