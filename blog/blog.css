@@ -1,0 +1,98 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.2;
+}
+header, footer {
+    background-color: white;
+    color: black;
+    padding: 0;
+    text-align: center;
+}
+header {
+    font-family: Times, serif;
+}
+.orange-line {
+    border: none;
+    border-top: 1px solid orange;
+    width: 100%;
+}
+.main-nav {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    justify-content: right;
+    }
+.main-nav li {
+    padding: 8px;
+}
+.main-nav a {
+    color: #b30059;
+    text-decoration: none;
+    justify-content: right;
+}
+#book-list {
+    padding: 0;
+}
+.book {
+    padding: 0;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+}
+.book h2 {
+    color: #b30059;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px;
+}
+.book p {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: grid;
+    justify-content: right;
+}
+.book img {
+    max-width: 100%;
+    display: block;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+@media (min-width: 600px) {
+    .book {
+        display: grid;
+        grid-template-columns: .35fr .05fr 1fr;
+        justify-content: center;
+    }
+    .book p {
+        grid-column: 1/2;
+    }
+    .book h2 {
+        grid-row: 1/2;
+        grid-column: 3/4;
+        text-align: left;
+    }
+    .book img {
+        grid-row: 2/6;
+        grid-column: 3/4;
+    }
+    #desc {
+        grid-row: 6/7;
+        grid-column: 3/4;
+    }
+    /* This targets your HTML element and locks it to line 2 */
+    .vertical-divider-line {
+    display: grid;    
+    grid-column: 2;
+    grid-row: 1/7;          /* Positions it exactly on grid line 2 */
+    width: 1px;              /* Sets line thickness */
+    height: 100%;            /* Makes it span full height of the row */
+    background-color: orange;/* Sets line color */
+    }
+    #orange-line2 {
+        display: none;
+    }
+}
+          
