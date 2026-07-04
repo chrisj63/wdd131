@@ -106,7 +106,6 @@ function search() {
     sortedHikes.forEach(function(hike) {
         renderHike(hike);
     })
-
 }
 
 let randomNum = Math.floor(Math.random() * hikes.length);
