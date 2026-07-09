@@ -281,12 +281,41 @@ const recipes = [
 	}
 ]
 
+// top
+// let hikeContainer = document.querySelector('#hike-container');
+
+// let button = document.querySelector('button');
+
+// button.addEventListener('click', search);
+
+// function search() {
+//     let hikeQuery = document.querySelector('#search').value;
+//     let filterHikes = hikes.filter(function(hike) {
+//         return (
+//             hike.name.toLowerCase().includes(hikeQuery.toLowerCase()) ||
+//             hike.description.toLowerCase().includes(hikeQuery.toLowerCase()) ||
+//             hike.tags.find(tag => tag.toLowerCase().includes(hikeQuery.toLowerCase()))
+//         );
+//     })
+
+//     console.log(filterHikes);
+
+
+
+// bottom
 
 let recipeContainer = document.querySelector('#recipe-container');
-let input = document.querySelector('#searchInput');
-let search1 = document.querySelector('#searchButton');
 
-search1.addEventListener('click', search);   
+let input = document.querySelector('#searchInput');
+
+let button = document.querySelector('#searchButton');
+
+
+if button {
+    button.addEventListener('click', search);   
+}
+
+
 
 /* for the enter key to work on search - not just clicking the search button */
 input.addEventListener('keypress', handleEnter);
@@ -297,6 +326,7 @@ function handleEnter(event) {
 }
 
 function search() {
+
     let recipeQuery = input.value.trim();
     let filterRecipes = recipes.filter(function(recipe){
         return ( 
@@ -307,7 +337,7 @@ function search() {
     })
 
   
- function compareRecipes(a,b) {
+    function compareRecipes(a,b) {
     if (a.rating < b.rating) {
         return -1;
     } else if (a.rating > b.rating) {
@@ -326,6 +356,8 @@ function search() {
     })
 }
 
+
+
 function tagTemplate(tags) {
 return tags.map((tag)=> `<h3>${tag}</h3>`).join(' ');
 }
@@ -335,7 +367,7 @@ function ratingTemplate(rating) {
         class="rating"
         role="img"
         aria-label="Rating: ${rating} out of 5"
-    >  Rating: `
+>  Rating: `
     for (let i = 1; i <= 5; i++) {
       if (i <= rating) {
         html += `<span aria-hidden="true" class="icon-boot"> 🥾</span>`

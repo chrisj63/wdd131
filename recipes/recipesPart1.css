@@ -21,8 +21,8 @@ h1 {
     margin: 22px 5px 3px;
 }
 h3 {
-  width: 70px;
-  height: 25px;
+  width: 60px;
+  height: 15px;
   border: 2px solid #ccc;
   padding: .5rem;
   border-radius: 5px;
@@ -101,7 +101,6 @@ footer {
     font-weight: 700;
     color:#47a7e4;
     margin: 5px 0px;
-    max-width: 350px;
 }
 .bottom {
         display: flex;
@@ -122,31 +121,22 @@ footer {
     width: 30px;
     height: 30px;
 }
- .recipe-tags {
-    display: flex;
-    flex-direction: row;
-    gap: 2px;
- }
- #searchButton {
-    cursor: pointer;
-}
 
-
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 550px) {
     header {
         justify-content: center;
     }
     p {
         display: grid;
-        max-width: 500px;
     }
     .recipe-container {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0px;
         align-items: flex-start;
     }
-    .recipe-card {
-        display: flex;
+    .recipe-image {
+    max-width: 550px;
+    height: auto;
     }
     .bottom {
         display: flex;

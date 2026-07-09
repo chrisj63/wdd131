@@ -281,12 +281,42 @@ const recipes = [
 	}
 ]
 
+// top
+// let hikeContainer = document.querySelector('#hike-container');
+
+// let button = document.querySelector('button');
+
+// button.addEventListener('click', search);
+
+// function search() {
+//     let hikeQuery = document.querySelector('#search').value;
+//     let filterHikes = hikes.filter(function(hike) {
+//         return (
+//             hike.name.toLowerCase().includes(hikeQuery.toLowerCase()) ||
+//             hike.description.toLowerCase().includes(hikeQuery.toLowerCase()) ||
+//             hike.tags.find(tag => tag.toLowerCase().includes(hikeQuery.toLowerCase()))
+//         );
+//     })
+
+//     console.log(filterHikes);
+
+
+
+// bottom
 
 let recipeContainer = document.querySelector('#recipe-container');
-let input = document.querySelector('#searchInput');
-let search1 = document.querySelector('#searchButton');
 
-search1.addEventListener('click', search);   
+let input = document.querySelector('#searchInput');
+
+let button = document.querySelector('button');
+
+let searchIcon = document.querySelector('#search-icon');
+
+//searchIcon.addEventListener('click', search);
+
+
+button.addEventListener('click', search);
+
 
 /* for the enter key to work on search - not just clicking the search button */
 input.addEventListener('keypress', handleEnter);
@@ -297,7 +327,8 @@ function handleEnter(event) {
 }
 
 function search() {
-    let recipeQuery = input.value.trim();
+
+    let recipeQuery = document.querySelector('#searchInput').value;
     let filterRecipes = recipes.filter(function(recipe){
         return ( 
             recipe.name.toLowerCase().includes(recipeQuery.toLowerCase()) ||
@@ -306,8 +337,11 @@ function search() {
         );
     })
 
-  
- function compareRecipes(a,b) {
+      console.log(recipeQuery);
+      console.log(filterRecipes);
+
+
+    function compareRecipes(a,b) {
     if (a.rating < b.rating) {
         return -1;
     } else if (a.rating > b.rating) {
@@ -326,8 +360,10 @@ function search() {
     })
 }
 
+
+
 function tagTemplate(tags) {
-return tags.map((tag)=> `<h3>${tag}</h3>`).join(' ');
+return tags.map((tag)=> `<button>${tag}</button>`).join(' ');
 }
 
 function ratingTemplate(rating) {
@@ -335,7 +371,7 @@ function ratingTemplate(rating) {
         class="rating"
         role="img"
         aria-label="Rating: ${rating} out of 5"
-    >  Rating: `
+>  Rating: `
     for (let i = 1; i <= 5; i++) {
       if (i <= rating) {
         html += `<span aria-hidden="true" class="icon-boot"> 🥾</span>`
@@ -348,20 +384,16 @@ function ratingTemplate(rating) {
   }
 
 function RecipesTemplate(recipe) {
-    return `
-    <section class="recipe-card">
-        <figure class="recipe-image">
-            <img src="${recipe.image}" alt="Picture of ${recipe.name}">
-        </figure> 
-        <section class="recipe-name-rating">
-            <div class="recipe-tags">
-                ${tagTemplate(recipe.tags)}
-            </div>
-            <h2>${recipe.name}</h2>
-            ${ratingTemplate(recipe.rating)}
-            <p>${recipe.description}</p>      
-        </section>
-    </section>`;
+    return `<section class="recipe-container">
+  <div class="recipe-content">
+    <div class="recipe-tags">
+      ${tagTemplate(recipes.recipeInstructions)}
+    </div>
+    <h2>${recipe.name}</h2>
+    <p>${recipe.rating}</p>    
+    <p>${recipe.description}</p>
+  </div>
+</div>`
 }
 
 function renderRecipe(recipe) {
