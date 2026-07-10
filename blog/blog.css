@@ -36,11 +36,17 @@ header {
 #book-list {
     padding: 0;
 }
+#leftSide {
+    min-width: 150px;
+}
 .book {
-    padding: 0;
+    padding: 1rem;
     border-radius: 10px;
-    max-width: 700px;
+    max-width: 1200px;
     margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .book h2 {
     color: #b30059;
@@ -55,12 +61,16 @@ header {
     justify-content: right;
 }
 .book img {
-    max-width: 100%;
+    max-width: 200px;
     display: block;
     border-radius: 8px;
     margin: 0 auto;
 }
+
+
+
 @media (min-width: 600px) {
+   
     .book {
         display: grid;
         grid-template-columns: .35fr .05fr 1fr;
@@ -68,6 +78,7 @@ header {
     }
     .book p {
         grid-column: 1/2;
+        margin: 8px;
     }
     .book h2 {
         grid-row: 1/2;
@@ -78,10 +89,11 @@ header {
         grid-row: 2/6;
         grid-column: 3/4;
     }
-    #desc {
+    .desc {
         grid-row: 6/7;
         grid-column: 3/4;
     }
+
     /* This targets your HTML element and locks it to line 2 */
     .vertical-divider-line {
     display: grid;    
@@ -91,8 +103,18 @@ header {
     height: 100%;            /* Makes it span full height of the row */
     background-color: orange;/* Sets line color */
     }
+    
+    .coverImg {
+        width: 300px;
+        height: auto;
+    }
+    
     #orange-line2 {
         display: none;
     }
+    #leftSide {
+    min-width: 225px;
+}
+
 }
           
