@@ -54,18 +54,20 @@ function listParts() {
 
  function bookTemplate(article) {
      return `
-        <div id="leftSide">    
-            <p><strong><em>${article.date}</em></strong></p>
-            <p><strong>${article.ages}</strong></p>
-            <p><strong>${article.genre}</strong></p>
-            <p><strong></strong> <span aria-label="4 out of 5 stars" role="img">${article.stars}</span></p>
-        </div> 
-        <div class="vertical-divider-line"></div>
-        <div id="rightSide">
-            <h2>${article.title}</h2>
-            <img class = 'coverImg' src="${article.imgSrc}" alt="${article.imgAlt}">
-            <p class ='desc'>${article.description}</p>              
-        </div>   
+        <section class="articleBook"> 
+			<div id="leftSide">    
+				<p><strong><em>${article.date}</em></strong></p>
+				<p><strong>${article.ages}</strong></p>
+				<p><strong>${article.genre}</strong></p>
+				<p><strong></strong> <span aria-label="4 out of 5 stars" role="img">${article.stars}</span></p>
+			</div> 
+			<div class="vertical-divider-line"></div>
+			<div id="rightSide">
+				<h2>${article.title}</h2>
+				<img class = 'coverImg' src="${article.imgSrc}" alt="${article.imgAlt}">
+				<p class ='desc'>${article.description}</p>              
+			</div>
+        </section>  
      `;
  }
 

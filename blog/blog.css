@@ -71,10 +71,10 @@ header {
 
 @media (min-width: 600px) {
    
-    .book {
+     .articleBook {
+        margin: 14px auto;
         display: grid;
         grid-template-columns: .35fr .05fr 1fr;
-        justify-content: center;
     }
     .book p {
         grid-column: 1/2;
@@ -98,23 +98,20 @@ header {
     .vertical-divider-line {
     display: grid;    
     grid-column: 2;
-    grid-row: 1/7;          /* Positions it exactly on grid line 2 */
+    grid-row: 1/7;           /* Positions it exactly on grid line 2 */
     width: 1px;              /* Sets line thickness */
-    height: 100%;            /* Makes it span full height of the row */
+    height: 100%;         /* Makes it span full height of the row */
     background-color: orange;/* Sets line color */
-    }
-    
+    }  
     .coverImg {
         width: 300px;
         height: auto;
     }
-    
     #orange-line2 {
         display: none;
     }
     #leftSide {
     min-width: 225px;
-}
-
+    }
 }
           
