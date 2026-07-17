@@ -43,8 +43,8 @@ section {
   justify-content: center;
 }
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 85%;
+    height: 85%;
 }
 nav a {
     padding: 4px;
