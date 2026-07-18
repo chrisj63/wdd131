@@ -1,181 +1,183 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
-body {
-  margin: 0;
-  padding: 0;
-  min-width: 250px;
-  font-family: Roboto, sans-serif;
-}
-#logo {
-    width: 250px;
-    height: 200px;
-}
-#top {
-    display: flex;
-    flex-direction: column;
-}
-header,
-main,
-footer {
-  max-width: 900px;
-  margin: 1rem auto;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  background-color: #799496;
-  min-width: 300px;
-}
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-h1 {
-    text-align: center;
-    color: white;
-    margin-top: 0px;
-    margin-bottom: 25px;
-}
-.indexCard {
-  padding: 20px;
-  background-color: white;
-  margin: 3px;
-  border: 1px solid #555;
-  text-align: center;
-  justify-content: center;
-  min-width: 250px;
-}
-.logo {
-    width: 85%;
-    height: 85%;
-}
-nav a {
-    padding: 4px;
-    color: white;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    border-top: 1px solid gray;
-}
-.hide {
-        display: none;
-    }
-nav a:hover {
-    text-decoration: none;
-    color: #5a0001;
-}
-.menu-btn {
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-}
-.bar1, .bar2, .bar3 {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    margin: 5px 0;
-    transition: 0.4s;
-}
-.change .bar1 {
-    transform: translate(0, 8.5px) rotate(-45deg);
-}
-.change .bar2 {opacity: 0;}
-.change .bar3 {
-    transform: translate(0, -8.5px) rotate(45deg);
-}
-footer {
-    text-align: center;
-    color: white;
-}
-
-
-/* "Character Card" */
-.cards {
-    display: grid;
-    grid-template-columns: 1fr;   
-}
-
-  .card {
-    background: #313131;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.9);
-    width: 400px; 
-    margin: 10px auto;
-  }
-  #cardTop {
-    background-color: white;
-    height: 250px;
-  }
-
-  .image{
-    width: 400px;
-    border-radius: 15px 15px 0 0;
-    }
-
-  .name {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: -4px 0 20px 0;
-    color: white;
-    padding: 15px 0 15px 35px;
-    background-color: #5d747b;
-  }
-
-  .stats {
-    margin: 10px 15px 7px 35px;
-    text-align: left;
-  }
-
-  .stats p {
-    margin: 5px 0;
-    color: #f0f4f8;
-  }
-label {
-    color: white;
-    padding-right: 10px;
-}
-
-input {
+    body {
+    margin: 0;
+    padding: 0;
     min-width: 250px;
-}
-
-  .buttons {
+    font-family: Roboto, sans-serif;
+    }
+    header,
+    main,
+    footer {
+    max-width: 900px;
+    margin: 1rem auto;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: #799496;
+    min-width: 300px;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        text-align: center;
+        color: white;
+        margin-top: 0px;
+        margin-bottom: 25px;
+    }
+    nav a {
+        padding: 4px;
+        color: white;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        border-top: 1px solid gray;
+    }
+    nav a:hover {
+        text-decoration: none;
+        color: #5a0001;
+    }
+    footer {
+        text-align: center;
+        color: white;
+    }
+    .menu-btn {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+    .change .bar1 {
+        transform: none;
+    }
+    .change .bar2 {opacity: 1;}
+    .change .bar3 {
+        transform: none;
+    }
+    .bar1 {
+        transform: translate(0, 8.5px) rotate(-45deg);
+    }
+    .bar2 {opacity: 0;}
+    .bar3 {
+        transform: translate(0, -8.5px) rotate(45deg);
+    }
+    .hide {
+            display: none;
+    }
+    .indexCard {
+    padding: 20px;
+    background-color: white;
+    margin: 3px;
+    border: 1px solid #555;
     text-align: center;
-  }
+    justify-content: center;
+    min-width: 250px;
+    }
+    .logo {
+        width: 85%;
+        height: 85%;
+    }
+    #logo {
+        width: 250px;
+        height: 200px;
+    }
+    #top {
+        display: flex;
+        flex-direction: column;
+    }
 
-  button {
-    padding: 8px 12px;
-    margin: 20px;
-    border: none;
-    border-radius: 8px;
-    background-color: #5d747b;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-  }
+    /* "Character Card" */
+    label {
+        color: white;
+        padding-right: 10px;
+    }
+    input {
+        min-width: 250px;
+    }
+    button {
+        padding: 8px 12px;
+        margin: 20px;
+        border: none;
+        border-radius: 8px;
+        background-color: #5d747b;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.5s ease;
+    }
 
-  button:hover {
-    background-color: #58605a;
-  }            
-                    
-
-
-@media screen and (min-width: 665px) {
+    button:hover {
+        background-color: #58605a;
+    }      
     .cards {
         display: grid;
         grid-template-columns: 1fr;   
-}
+    }
+    .card {
+        background: #313131;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+        width: 400px; 
+        margin: 10px auto;
+    }
+    .image{
+        width: 400px;
+        border-radius: 15px 15px 0 0;
+    }
+    .name {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: -4px 0 20px 0;
+        color: white;
+        padding: 15px 0 15px 35px;
+        background-color: #5d747b;
+    }
+    .stats {
+        margin: 10px 15px 7px 35px;
+        text-align: left;
+    }
+    .stats p {
+        margin: 5px 0;
+        color: #f0f4f8;
+    }
+    /* .sidesAndAngles {
+        width: 25px;
+        height: 25px;
+        
+    } */
+    .isoscelesImage {
+        width: 225px;
+        height: auto;
+        padding-top: 15px;
+    }
+    .buttons {
+        text-align: center;
+    }    
+    .formula-card {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+    #cardTop {
+        background-color: white;
+        height: 250px;
+        text-align: center;
+    }                  
 
+
+@media screen and (min-width: 665px) {
     main {
         grid-template-columns: 1fr 1fr;
     }
-    .menu-btn {
-        display: none;
-    }
-    #top {
-    display: flex;
-    flex-direction: row;
-}
     nav a {
         display: inline;
         border-top: none;
@@ -186,8 +188,12 @@ input {
     footer {
         display: flex;       
     }
-    #version {
-       margin-left: auto; 
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;   
+    }
+    .menu-btn {
+        display: none;
     }
     .sidesAndAngles {
         display: flex;
@@ -195,6 +201,13 @@ input {
     }
     .card {
         width: 700px;
+    }
+    #top {
+    display: flex;
+    flex-direction: row;
+    }  
+    #version {
+        margin-left: auto; 
     }
 }
 
