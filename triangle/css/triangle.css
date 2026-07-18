@@ -152,6 +152,16 @@
         height: auto;
         padding-top: 15px;
     }
+    .obtuseImage {
+        width: 225px;
+        height: auto;
+        padding-top: 15px;
+    }
+    .acuteImage {
+        width: 225px;
+        height: auto;
+        padding-top: 15px;
+    }
     .buttons {
         text-align: center;
     }    
