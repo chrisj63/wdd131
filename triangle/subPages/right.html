@@ -33,12 +33,57 @@
             <a href="../subPages/formula.html">Formulas</a>
         </nav>
     </header>
-    <main>
-
-
-        <p>Right Triangle</p>
-
-        
+    <main class="cards">
+        <Section class="card">
+                <div id="cardTop">
+                    <img class="image" src="../images/RightTrianglePageImage.png" alt="Swamp based diplomat charater named snortleblat standing in the swamp">
+                </div>
+                <div id="cardMiddle">
+                    <h1 class="name">Pathagorean Theorem</h1>
+                </div>
+                <div id="cardBottom" class="stats">
+                    <p id="status">Status: Enter angles and/or side lengths</p>
+                    <p id="formula">Formula: formula</p>
+                    <p id="level">Use Side Angle Side or Angle Side Angle</p>
+                    <p id="instructions">Enter only numbers. Click Solve.</p>
+                </br>
+                    <section class="sidesAndAngles">
+                        <div class="sides">   
+                            <div id="A" class="fullField">
+                                <label for="sideA">A</label>
+                                <input id="sideA" name="sideA" type="number" placeholder = "Side A length. Numbers only."/>
+                            </div>
+                            <div id="B" class="fullField">
+                                <label for="sideB">B</label>
+                                <input id="sideB" name="sideB" type="number" placeholder = "Side B length. Numbers only."/>
+                            </div>
+                            <div id="C" class="fullField">
+                                <label for="sideC">C</label>
+                                <input id="sideC" name="sideC" type="number" placeholder = "Side C length. Numbers only."/>
+                            </div>
+                        </div>
+                        </br>
+                        <div class="angles">    
+                            <div id="x" class="fullField">
+                                <label for="anglex">x</label>
+                                <input id="anglex" name="anglex" type="number" placeholder = "90"/>
+                            </div>
+                            <div id="y" class="fullField">
+                                <label for="angley">y</label>
+                                <input id="angley" name="angley" type="number" placeholder = "Angle y in degrees. Numbers only."/>
+                            </div>
+                            <div id="z" class="fullField">
+                                <label for="anglez">z</label>
+                                <input id="anglez" name="anglez" type="number" placeholder = "Angle z in degrees. Numbers only."/>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div id="cardButtons" class="buttons">
+                    <button id="buttonSolve" type="submit">Solve</button>
+                    <button id="buttonReset" type="submit">Reset</button>
+                </div>
+            </Section>   
     </main>
     <footer>
         <p>&copy; 2026 Lavell Apps. All Rights Reserved.</p>
